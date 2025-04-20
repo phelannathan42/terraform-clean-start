@@ -1,0 +1,34 @@
+# Ignore Terraform working directories
+.terraform/
+**/.terraform/*
+
+# Skip Terraform state files (sensitive resource data)
+*.tfstate
+*.tfstate.*
+
+# Skip any crash logs from Terraform runs
+crash.log
+crash-*.log
+
+# Sensitive variable files (often contain secrets like keys, passwords)
+*.tfvars
+*.tfvars.json
+
+# Local override files (typically for personal dev use)
+*_override.tf
+*_override.tf.json
+override.tf
+override.tf.json
+
+# If you have an override file you want to keep, unignore like so:
+#!keep_this_override.tf
+
+# Skip plan files (output of terraform plan -out=...)
+*tfplan*
+
+# Skip CLI-specific config files
+.terraformrc
+terraform.rc
+
+
+
